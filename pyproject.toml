@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "modern-api-template"
+version = "0.1.0"
+description = "Modern api template with the most moderns python packages"
+authors = ["Jorge Tilleria <jltilleriam@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.8"
+fastapi = "^0.115.8"
+sqlalchemy = "^2.0.38"
+alembic = "^1.14.1"
+
+
+[tool.poetry.group.dev.dependencies]
+hypothesis = "^6.126.0"
+bandit = "^1.8.3"
+sphinx = "^8.2.1"
+ruff = "^0.9.7"
+pyright = "^1.1.394"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+builtins = ["_"]
+line-length = 120
+fix = true
+target-version = "py313"
+
+[tool.ruff.analyze]
+detect-string-imports = true
+
+[tool.ruff.format]
+docstring-code-format = true
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint]
+ignore = ["D203", "D212", "DTZ005"]
+typing-modules = []
+select = ["ALL"]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"__init__.py" = ["D104", "E402"]
+
+[tool.ruff.lint.flake8-annotations]
+allow-star-arg-any = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.ruff.lint.pylint]
+max-args = 10
