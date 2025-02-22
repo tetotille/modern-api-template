@@ -1,0 +1,19 @@
+{
+    "typeCheckingMode": "strict",
+    "include": [
+        "./app",
+        "./adapters",
+        "./config",
+        "main.py"
+    ],
+    "exclude": [
+        "./tests",
+        "./node_modules"
+    ],
+    "reportMissingTypeStubs": true,
+    "reportMissingImports": true,
+    "reportUnusedVariable": true,
+    "reportUnusedFunction": true,
+    "reportUnusedClass": true,
+    "reportUnusedImport": true
+}
